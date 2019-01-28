@@ -2,26 +2,28 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Grid from 'react-bootstrap/lib/Grid';
+
+import styled from 'styled-components';
+
+import Header from './components/Header'
+import Menu from './components/Menu'
+import Main from './components/Main'
+
+
 class App extends Component {
   render() {
     return (
-            <div className="wrapper">
-              <SayFullName name="Ilya" surname="Kryazhev" link="vk.com" />
-              <SayFullName name="Vlad" surname="Savonov" link="facebook.com" />
-              <SayFullName name="Kigil" surname="Zhiguli" link="#" />
-            </div>
+           <div className="App" >
+            <Header/>
+            <Menu/>
+            <Main/>
+           </div>
     );
   }
 }
 
-function SayFullName(props) {
-  return (
-      <div>
-      <h1>Моё имя {props.name}, фамилия - {props.surname}</h1>
-      <a href={props.link}>Ссылка на мой профиль</a>
-      </div>
-  )
-}
+
 
 
 export default App;
